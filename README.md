@@ -11,7 +11,7 @@ This is done by making a call to an external api.
 - The `rates` function then displays all the exchange rates against the chosen base currency.
 - `single_rate` function can display single rates.
 
-- Result is both printed in the terminal anc can be found in `Exchange.txt` file
+- Result is both printed in the terminal anc can be found in `rates.txt` file
 
 ```
 import json
@@ -52,4 +52,27 @@ class Exchange:
         else:
             print("Currency not available")
 
+```
+
+#### Program.py
+- Program run in `program.py`
+- `AUD` Chosen as base currency. 
+- Once program is run `rates.txt` will be populated as seen below
+
+```python
+from app.exchange_api import Exchange
+
+
+rate1 = Exchange("AUD")
+```
+#### Rates.txt
+```python
+AUD/AUD --- 1: 1
+AUD/AED --- 1: 2.7652
+AUD/AFN --- 1: 59.722
+AUD/ALL --- 1: 77.5955
+AUD/AMD --- 1: 373.16
+AUD/ANG --- 1: 1.3478
+AUD/AOA --- 1: 492.3415
+...............
 ```
