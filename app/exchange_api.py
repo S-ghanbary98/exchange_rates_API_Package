@@ -40,6 +40,21 @@ class Exchange:
             print("Currency not available")
 
 
+    def graph_plotter(self, currency):
+        for i in range(1,10):
+            year = 2005 + i
+            for t in range(1, 12):
+                month = 0 + t
+                for o in range(0, 28)
+                    day = 0 + 1
 
+        url = "https://v6.exchangerate-api.com/v6/92ae685f1a767893873e4b71/history/" + self.base_currency + "/" + str(year) + "/" + str(month) + "/" + str(day)
+        check_response_rates = requests.get(url)
+        response_dict = check_response_rates.json()
+        y = range(1,3660)
+        x = response_dict['conversion_rates'][currency]
+
+        plt.plot(x, y, color="red")
+        plt.show()
 
 
